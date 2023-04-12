@@ -1,0 +1,31 @@
+USE CARS;
+CREATE WAREHOUSE CARS;
+
+CREATE OR REPLACE TABLE BRILLIANT_BRITISH_CARS(
+Invoice_Date STRING,
+Make VARCHAR(30),
+Country_Name	VARCHAR(40),
+Is_Dealer VARCHAR(30),
+Sale_Price INT,
+Cost_Price INT,
+Total_Discount INT,	
+Delivery_Charge INT,
+Spare_Parts	INT,
+Labor_Cost	INT,
+Client_Name	VARCHAR(30) not null primary key,
+Model VARCHAR(30),
+Color VARCHAR(30),
+Reporting_Year STRING,
+Reporting_Month STRING,
+Registration_Date STRING,	
+Vehicle_Type VARCHAR(20),
+Invoice_Number STRING,
+Country_ISO_Code VARCHAR(20),
+Outer_Postode VARCHAR(10),
+Region VARCHAR(100)
+);
+
+DESCRIBE TABLE BRILLIANT_BRITISH_CARS;
+select * from BRILLIANT_BRITISH_CARS;
+
+select get_ddl('table','BRILLIANT_BRITISH_CARS');
